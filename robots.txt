@@ -1,15 +1,14 @@
-# Archivo robots.txt para WordPress
-# http://www.teusoft.com/el-archivo-robotstxt-perfecto-para-wordpress
-#
-# Sitemap.xml de nuestro blog
-Sitemap: http://tu-sitio.com/sitemap.xml
-# Robots.txt
+# SITEMAP.XML - MUST BE FILLED, OR DELETE IT
+Sitemap: http://your-site.com/sitemap.xml
+
+# USER-AGENT
 User-agent: *
 Allow: /wp-content/uploads/
 Disallow: /wp-content/
 Disallow: /wp-admin/
 Disallow: /wp-includes/
-# Desindexar entradas duplicadas, comentarios y trackbacks
+
+# DO NOT INDEX DUPLICATE POSTS, COMMENTS AND TRACKBACKS
 Allow: /feed/$
 Disallow: /feed
 Disallow: /comments/feed
@@ -26,7 +25,8 @@ Disallow: /?s=
 Disallow: /search
 
 User-agent: Googlebot
-# No indexar archivos terminados con estas extensiones
+
+# DO NOT INDEX FILES WITH THIS EXTENSIONS
 Disallow: /*.php$
 Disallow: /*.js$
 Disallow: /*.inc$
@@ -38,13 +38,15 @@ Disallow: /*.xhtml$
 Disallow: /*?*
 Disallow: /*.txt$
 
-# Permitir bot de Adsense. Opcional, pero recomedable si lo usamos.
+# ALLOW ADSENSE BOT (OPTIONAL)
 User-agent: Mediapartners-Google*
 Disallow:
-# Permitir a Google Imagenes indexar nuestras imagenes. Opcional.
+
+# ALLOW GOOGLE IMAGES (OPTIONAL)
 User-agent: Googlebot-Image
 Disallow:
-# Limitar los bots de Yahoo, MSN y Noxtrum. Opcional.
+
+# LIMIT Yahoo, MSN AND Noxtrum BOTS (OPTIONAL)
 User-agent: noxtrumbot
 Crawl-delay: 50
 User-agent: msnbot
